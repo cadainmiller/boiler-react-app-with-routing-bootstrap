@@ -31,18 +31,21 @@ class Users extends React.Component {
   render() {
     return (
       <div className="p-4">
-        {this.state.persons.map((person) => (
-          <div>
+        {this.state.persons.map((person, key) => (
+          <div key={key}>
             <div className="card m-2">
               <div className="card-header">{person.name}</div>
               <div className="card-body">
                 <blockquote className="blockquote mb-0">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Integer posuere erat a ante.
-                  </p>
+                  <ul>
+                    <li>Name: {person.name}</li>
+                    <li>Username: {person.username}</li>
+                    <li>Email: {person.email}</li>
+                    <li>Phone: {person.phone}</li>
+                    <li>Website: {person.website}</li>
+                  </ul>
                   <footer className="blockquote-footer">
-                    {person.name} 
+                    {person.name}
                     <cite title="Source Title"> Source Title</cite>
                   </footer>
                 </blockquote>
