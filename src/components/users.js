@@ -48,7 +48,7 @@ class Users extends React.Component {
           <div
             className="modal fade"
             id="exampleModal"
-            tabindex="-1"
+            //tabindex="-1"
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
           >
@@ -71,10 +71,14 @@ class Users extends React.Component {
                   </div>
                   <form>
                     <div>
-                      <div>
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
-                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      <div className="form-group">
+                      <label htmlFor="name">Full Name</label>
+                      <input type="text" className="form-control" id="name" aria-describedby="name" placeholder="Jon Doe"></input>
+                      </div>
+                      <div className="form-group">
+                      <label htmlFor="exampleInputEmail1">Email address</label>
+                      <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
+                      <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                       </div>
                     </div>
                   </form>
@@ -82,7 +86,7 @@ class Users extends React.Component {
                 <div className="modal-footer">
                   <button
                     type="button"
-                    class="btn btn-secondary"
+                    className="btn btn-secondary"
                     data-dismiss="modal"
                   >
                     Close
